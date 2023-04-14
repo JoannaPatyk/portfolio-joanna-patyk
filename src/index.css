@@ -1,7 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;900&family=Zen+Tokyo+Zoo&display=swap');
+
 *,
 ::after,
 ::before {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+:root {
+    --primary-100: #fefced;
+    --primary-200: #fdf3b7;
+    --primary-300: #fbec93;
+    --primary-400: #fbe981;
+    --primary-500: #f9e04b;
+
+    --secondary-100: #f4edf8;
+    --secondary-200: #d2b7e1;
+    --secondary-300: #bb94d2;
+    --secondary-400: #a570c3;
+    --secondary-500: #8e4cb4;
+
+    --black: #111;
+    --white: #fff;
+    --red: #d10303;
+    --green: #2e8b57;
+
+    --linearGradient-1: linear-gradient(to right, var(--primary-500), var(--white), var(--primary-500));
+    --linearGradient-2: linear-gradient(to right, transparent, var(--white), transparent);
+
+    --titleFont: 'Zen Tokyo Zoo', cursive;
+    --basicFont: 'Montserrat', sans-serif;
+
+    --borderRadius: 0.25rem;
+    --smallLetterSpacing: 0.1rem;
+    --letterSpacing: 0.25rem;
+    --transition: 0.5s all;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1440px;
+    background-color: var(--black);
+}
+
+.btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    margin: 2rem 0;
+    padding: 0.4rem 0.8rem;
+    color: var(--black);
+    font-family: var(--basicFont);
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: var(--letterSpacing);
+    border: transparent;
+    border-radius: 5px;
+    background: var(--linearGradient-1);
+    overflow: hidden;
+    visibility: hidden;
+    animation: fadeAnimation 3s forwards;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--linearGradient-2);
+    transform: skewX(-30deg);
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    animation: fadeAnimation 1s 2s forwards;
+    transition: var(--transition);
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    transform: scale(0.98);
+}
+
+@keyframes fadeAnimation {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
 }
