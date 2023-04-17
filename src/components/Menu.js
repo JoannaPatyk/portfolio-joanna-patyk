@@ -33,11 +33,11 @@ const Wrapper = styled.nav`
         padding: 1rem;
         text-decoration: none;
         text-transform: uppercase;
-        font-family: var(--basicFont);
+
         font-size: 1.5rem;
         color: var(--secondary-200);
         letter-spacing: var(--letterSpacing);
-        border-bottom: 4px dotted transparent;
+        border-bottom: 4px double transparent;
         transition: var(--transition);
     }
 

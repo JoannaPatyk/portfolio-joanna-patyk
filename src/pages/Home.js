@@ -23,7 +23,7 @@ function Home() {
                         </p>
                     </div>
                     <Link className="btn" to="/projects">
-                        View Project
+                        see more
                     </Link>
                 </div>
 
@@ -49,7 +49,7 @@ const Wrapper = styled.div`
 
     h1 {
         font-weight: 100;
-        font-size: 5rem;
+        font-size: 6rem;
         color: var(--primary-500);
         font-family: var(--titleFont);
     }
@@ -57,7 +57,6 @@ const Wrapper = styled.div`
     h2,
     p {
         font-weight: 400;
-        font-family: var(--basicFont);
         color: var(--primary-500);
         letter-spacing: var(--smallLetterSpacing);
         line-height: 2rem;
@@ -76,12 +75,13 @@ const Wrapper = styled.div`
     h4 {
         font-weight: 400;
         font-size: 1.8rem;
-        font-family: var(--basicFont);
-        color: var(--primary-500);
+        color: var(--secondary-500);
         text-transform: uppercase;
         letter-spacing: var(--letterSpacing);
-        text-shadow: 1px 1px 5px var(--primary-500);
+        border-bottom: 4px double var(--secondary-500);
+        text-shadow: 1px 1px 5px var(--secondary-300);
         margin-bottom: 3rem;
+        padding-bottom: 1rem;
     }
 
     img {
