@@ -17,8 +17,9 @@ function Link() {
 
 const Wrapper = styled.div`
     .link-container {
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
+
     a {
         margin: 0;
     }

@@ -1,8 +1,11 @@
+import React from 'react';
+import { MdOutlineAlternateEmail, MdOutlineLocationOn } from 'react-icons/md';
+import { VscGithubAlt } from 'react-icons/vsc';
+
 const contact = [
-    { id: 1, text: '881-493-850' },
-    { id: 2, text: 'patykjoanna93@gmail.com' },
-    { id: 3, text: 'Kraków' },
-    { id: 4, text: '881-493-850' }
+    { id: 1, icon: <MdOutlineAlternateEmail />, text: 'patykjoanna93@gmail.com' },
+    { id: 2, icon: <VscGithubAlt />, text: 'https://github.com/JoannaPatyk' },
+    { id: 3, icon: <MdOutlineLocationOn />, text: 'Kraków' }
 ];
 
 export default contact;

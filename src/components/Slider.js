@@ -30,11 +30,9 @@ function Slider({ array }) {
                 <button onClick={goToPrevSlide} className="btn-left">
                     <TfiShiftLeftAlt />
                 </button>
-                <div className="gallery">
-                    {array.map(({ id, src, alt }) => (
-                        <img key={id} src={src} alt={alt} style={{ display: id === currentIndex ? 'block' : 'none' }} />
-                    ))}
-                </div>
+                {array.map(({ id, src, alt }) => (
+                    <img key={id} src={src} alt={alt} style={{ display: id === currentIndex ? 'block' : 'none' }} />
+                ))}
                 <button onClick={goToNextSlide} className="btn-right">
                     <TfiShiftRightAlt />
                 </button>

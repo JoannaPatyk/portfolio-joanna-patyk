@@ -1,17 +1,39 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import links from '../utils/links';
 
 function Menu() {
+    const navigate = useNavigate();
+
+    function handleClick(path) {
+        navigate(path);
+    }
+
     return (
         <Wrapper>
             <nav className="menu">
                 {links.map(({ id, text, path }) => {
                     return (
-                        <Link className="menu-element" to={path} key={id}>
+                        <div
+                            className="menu-element"
+                            role="button"
+                            tabIndex={0}
+                            key={id}
+                            onClick={() => handleClick(path)}
+                            onKeyDown={(event) => {
+                                if (event.key === 'Enter' || event.key === ' ') {
+                                    handleClick(path);
+                                }
+                            }}
+                            onKeyUp={(event) => {
+                                if (event.key === 'Escape') {
+                                    event.target.blur();
+                                }
+                            }}
+                        >
                             {text}
-                        </Link>
+                        </div>
                     );
                 })}
             </nav>
@@ -21,31 +43,28 @@ function Menu() {
 
 const Wrapper = styled.nav`
     .menu {
+        height: 10vh;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        height: 10vh;
-        width: 100%;
-        padding: 1rem;
     }
 
     .menu-element {
         padding: 1rem;
+        font-size: 1.5rem;
         text-decoration: none;
         text-transform: uppercase;
-
-        font-size: 1.5rem;
         color: var(--secondary-200);
         letter-spacing: var(--letterSpacing);
-        border-bottom: 4px double transparent;
         transition: var(--transition);
+        cursor: pointer;
     }
 
     .menu-element:hover {
         color: var(--secondary-500);
-        transform: scale(0.97);
+        transform: scale(0.95);
         border-bottom-color: var(--secondary-500);
-        text-shadow: 1px 1px 5px var(--secondary-500);
     }
 `;
 

@@ -7,7 +7,7 @@ import { GiFamilyTree } from 'react-icons/gi';
 const functionality = [
     {
         id: 1,
-        text: 'The main menu features a dashboard that presents various information for the current month. Users can navigate between different months. The dashboard includes a chart that displays incurred expenses in two formats: pie chart and bar chart. Furthermore, the dashboard provides information on the total planned expenses, incurred expenses, and the balance..',
+        text: 'The dashboard presents information for the current month. Users can navigate between different months. The dashboard includes a chart that displays incurred expenses in two formats: pie chart and bar chart. Furthermore, the dashboard provides information on the total planned expenses, incurred expenses, and the balance.',
         icon: <TfiStatsUp />
     },
 

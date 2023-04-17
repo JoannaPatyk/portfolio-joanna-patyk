@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;900&family=Zen+Tokyo+Zoo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@100;200;300;400;600;900&family=Zen+Tokyo+Zoo&display=swap');
 
 *,
 ::after,
@@ -28,21 +28,20 @@
     --red: #d10303;
     --green: #2e8b57;
 
-    --linearGradient-1: linear-gradient(to right, var(--primary-500), var(--white), var(--primary-500));
-    --linearGradient-2: linear-gradient(to right, transparent, var(--white), transparent);
+    --linearGradient-1: linear-gradient(to right, transparent, var(--white), transparent);
 
     --titleFont: 'Zen Tokyo Zoo', cursive;
-    --basicFont: 'Montserrat', sans-serif;
+    --basicFont: 'Quicksand', sans-serif;
 
     --borderRadius: 0.25rem;
     --smallLetterSpacing: 0.1rem;
     --letterSpacing: 0.25rem;
-    --transition: 0.5s all;
+    --transition: 0.6s all;
 }
 
 body {
     margin: 0 auto;
-    max-width: 1440px;
+    color: var(--primary-500);
     font-family: var(--basicFont);
     background-color: var(--black);
 }
@@ -52,24 +51,24 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20rem;
-    margin: 2rem 0;
+    width: 25rem;
+    margin: 2rem auto;
     padding: 0.4rem 0.8rem;
     color: var(--black);
     font-family: var(--basicFont);
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--primary-500);
     letter-spacing: var(--letterSpacing);
-    border: 2px solid var(--secondary-500);
-    border-radius: 5px;
+    border: 4px double var(--secondary-500);
+    border-radius: 30px;
     box-shadow: 1px 1px 5px var(--secondary-500);
     overflow: hidden;
     visibility: hidden;
-    animation: fadeAnimation 3s forwards;
+    animation: fadeAnimation 3s forwards;  
     transition: var(--transition);
     cursor: pointer;
 }
@@ -81,7 +80,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: var(--linearGradient-2);
+    background: var(--linearGradient-1);
     transform: skewX(-30deg);
     opacity: 0;
     visibility: hidden;
@@ -96,6 +95,8 @@ body {
 
 .btn:hover {
     transform: scale(0.98);
+    color: var(--black);
+    background-color: var(--secondary-500);
 }
 
 @keyframes fadeAnimation {
