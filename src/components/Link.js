@@ -6,10 +6,13 @@ function Link() {
     return (
         <Wrapper>
             <div className="link-container">
-                <h5>Link to the hosted application:</h5>
-                <a className="btn" href={link}>
-                    Household Expenses Tracker
-                </a>
+                <h5>Link to the application.</h5>
+                <div>
+                    <p>Just click and see how application looks like...</p>
+                    <a className="btn" href={link}>
+                        Household Expenses Tracker
+                    </a>
+                </div>
             </div>
         </Wrapper>
     );
@@ -17,9 +20,14 @@ function Link() {
 
 const Wrapper = styled.div`
     .link-container {
-        margin-bottom: 3rem;
+        height: 25vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
+    .link-container h5,
     a {
         margin: 0;
     }

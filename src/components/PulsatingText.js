@@ -25,6 +25,7 @@ const pulsate = keyframes`
 const Wrapper = styled.p`
     animation: ${pulsate} 2s ease-in-out infinite;
 `;
+
 PulsatingText.propTypes = {
     text: PropTypes.string
 };

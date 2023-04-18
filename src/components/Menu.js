@@ -48,11 +48,12 @@ const Wrapper = styled.nav`
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        padding-right: 3rem;
     }
 
     .menu-element {
-        padding: 1rem;
-        font-size: 1.5rem;
+        padding: 1.5rem;
+        font-size: 1.7rem;
         text-decoration: none;
         text-transform: uppercase;
         color: var(--secondary-200);

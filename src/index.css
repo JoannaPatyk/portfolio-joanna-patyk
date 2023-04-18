@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@100;200;300;400;600;900&family=Zen+Tokyo+Zoo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;900&family=Zen+Tokyo+Zoo&display=swap');
 
 *,
 ::after,
@@ -11,11 +11,11 @@
 }
 
 :root {
-    --primary-100: #f9f7f9;
-    --primary-200: #ede6ed;
-    --primary-300: #e7dee7;
-    --primary-400: #d0bdd0;
-    --primary-500: #c4adc4;
+    --primary-100: #ffe6fa;
+    --primary-200: #ffb3f0;
+    --primary-300: #ff80e6;
+    --primary-400: #ff4ddb;
+    --primary-500: #ff00cc;
 
     --secondary-100: #eaf7f8;
     --secondary-200: #ace0e2;
@@ -25,23 +25,22 @@
 
     --black: black;
     --white: #fff;
-    --red: #d10303;
-    --green: #2e8b57;
+    --violet: #333399;
 
     --linearGradient-1: linear-gradient(to right, transparent, var(--white), transparent);
 
     --titleFont: 'Zen Tokyo Zoo', cursive;
-    --basicFont: 'Quicksand', sans-serif;
+    --basicFont: 'Poppins', sans-serif;
 
     --borderRadius: 0.25rem;
     --smallLetterSpacing: 0.1rem;
-    --letterSpacing: 0.25rem;
+    --letterSpacing: 0.4rem;
     --transition: 0.6s all;
 }
 
 body {
     margin: 0 auto;
-    color: var(--primary-500);
+    color: var(--primary-300);
     font-family: var(--basicFont);
     background-color: var(--black);
 }
@@ -52,23 +51,23 @@ body {
     align-items: center;
     justify-content: center;
     width: 25rem;
-    margin: 2rem auto;
-    padding: 0.4rem 0.8rem;
+    margin: 1.6rem auto;
+    padding: 0.2rem 0.5rem;
     color: var(--black);
     font-family: var(--basicFont);
-    font-weight: 600;
-    font-size: 1.5rem;
+    font-weight: 300;
+    font-size: 1.6rem;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--primary-500);
+    color: var(--primary-300);
     letter-spacing: var(--letterSpacing);
     border: 4px double var(--secondary-500);
     border-radius: 30px;
     box-shadow: 1px 1px 5px var(--secondary-500);
     overflow: hidden;
     visibility: hidden;
-    animation: fadeAnimation 3s forwards;  
+    animation: fadeAnimation 3s forwards;
     transition: var(--transition);
     cursor: pointer;
 }

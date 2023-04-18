@@ -7,8 +7,8 @@ function Contact() {
     return (
         <Wrapper>
             <div className="contact-container">
+                <h2>Contact details</h2>
                 <div className="contact-details">
-                    <h2>Contact details</h2>
                     {contact.map(({ id, icon, text }) => (
                         <div key={id} className="contact-item">
                             <span>{icon}</span>
@@ -26,25 +26,30 @@ const Wrapper = styled.div`
     .contact-container {
         position: relative;
         width: 100%;
-        height: 100vh;
+        height: 90vh;
         display: flex;
         align-items: center;
         flex-direction: column;
-        padding-top: 4rem;
+        padding-top: 6rem;
+        overflow: hidden;
     }
 
     .contact-details {
         display: flex;
-        flex-direction: column;
         align-items: center;
+        flex-direction: column;
     }
 
     h2 {
         padding: 2rem 0;
-        font-size: 2rem;
+        font-size: 3.5rem;
         font-weight: 400;
         text-transform: uppercase;
         font-family: var(--titleFont);
+        background: linear-gradient(to right, #ff00cc, #2fb2b7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
         letter-spacing: var(--smallLetterSpacing);
     }
 
@@ -58,17 +63,18 @@ const Wrapper = styled.div`
     }
 
     .contact-item p {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+        font-weight: 200;
         padding: 2rem;
     }
 
     span {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.8rem;
+        font-size: 2rem;
         border: 2px solid var(--secondary-500);
         box-shadow: 1px 1px 2px var(--secondary-300);
         border-radius: 50%;
@@ -82,9 +88,9 @@ const Wrapper = styled.div`
 
     img {
         position: absolute;
-        bottom: 0;
+        bottom: -10%;
         right: 0;
-        height: 140%;
+        height: 150%;
         opacity: 0.3;
         z-index: -100;
     }

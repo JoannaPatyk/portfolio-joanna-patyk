@@ -24,7 +24,7 @@ function Slider({ array }) {
         setCurrentIndex(nextIndex);
     };
     return (
-        <>
+        <div className="slider-container">
             <h5>How does the application look like?</h5>
             <div className="slider">
                 <button onClick={goToPrevSlide} className="btn-left">
@@ -37,7 +37,7 @@ function Slider({ array }) {
                     <TfiShiftRightAlt />
                 </button>
             </div>
-        </>
+        </div>
     );
 }
 

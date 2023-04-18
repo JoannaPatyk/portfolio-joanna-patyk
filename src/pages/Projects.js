@@ -4,9 +4,12 @@ import images from '../utils/images';
 import Slider from '../components/Slider';
 import Technologies from '../components/Technologies';
 import Functionalities from '../components/Functionalities';
+import Footer from '../components/Footer';
 import Link from '../components/Link';
+import { GiTakeMyMoney } from 'react-icons/gi';
 
 function Project() {
+    const link = 'https://github.com/JoannaPatyk?tab=repositories';
     return (
         <Wrapper>
             <div className="projects-container">
@@ -46,13 +49,23 @@ function Project() {
                         <span>JSON Web Token</span> for user authentication. The backend uses the <span>MongoDB</span>
                         database through the <span>Mongoose</span> library.
                     </p>
+                    <GiTakeMyMoney className="description-icon" />
                 </div>
                 <Functionalities />
                 <Slider array={images} />
                 <Link />
-                <h2>Other projects</h2>
-                <p>Other projects that have been done by me can be found on my github profile.</p>
+                <div className="other-container">
+                    <h2>Other projects</h2>
+                    <p>
+                        Other projects that have been done by me can be found on my{' '}
+                        <span>
+                            <a href={link}>github profile</a>
+                        </span>
+                        .
+                    </p>
+                </div>
             </div>
+            <Footer />
         </Wrapper>
     );
 }
@@ -71,12 +84,16 @@ const Wrapper = styled.div`
     }
 
     .main-information-container {
-        padding: 6rem 0 2rem 0;
+        padding: 2rem 0;
     }
 
     h2 {
-        font-weight: 400;
-        color: var(--primary-500);
+        font-weight: 800;
+        font-size: 3rem;
+        background: linear-gradient(to right, #ff00cc, #2fb2b7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
         letter-spacing: var(--smallLetterSpacing);
         text-transform: uppercase;
     }
@@ -85,17 +102,23 @@ const Wrapper = styled.div`
     p {
         margin: 1rem;
         font-size: 1.1rem;
-        font-weight: 400;
-        line-height: 2rem;
-        text-align: justify;
-        color: var(--primary-500);
+        font-weight: 300;
+        line-height: 1.9rem;
+        text-align: center;
+        color: var(--primary-200);
         letter-spacing: var(--smallLetterSpacing);
     }
 
     h5 {
+        margin: 2rem 0;
         font-weight: 600;
         text-align: center;
-        font-size: 1.4rem;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        background: linear-gradient(to right, #ff00cc, #2fb2b7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 
     .main-information-container h5 {
@@ -104,7 +127,7 @@ const Wrapper = styled.div`
 
     .main-information-container h1 {
         font-weight: 100;
-        font-size: 3.5rem;
+        font-size: 4.5rem;
         color: var(--secondary-500);
         text-shadow: 1px 1px 5px var(--secondary-300);
         font-family: var(--titleFont);
@@ -121,40 +144,47 @@ const Wrapper = styled.div`
         flex-direction: column;
     }
 
-    .reason-description {
-        padding: 1rem;
-        border-radius: 5px;
-    }
-
-    .logo {
-        width: 35vw;
-        margin: 0 1rem 1rem 1rem;
-    }
-
     .technologies-container {
+        width: 70%;
+        height: 35vh;
         display: flex;
         align-items: center;
-        flex-direction: column;
+        justify-content: center;
+    }
+
+    .technologies-title-container {
+        border-right: 2px solid var(--primary-300);
+    }
+
+    .technologies-container h5 {
+        text-align: right;
+        padding-right: 1.5rem;
+    }
+
+    .technologies-icon {
+        display: flex;
+        font-size: 2.5rem;
+        column-gap: 1.2rem;
+        justify-content: center;
     }
 
     .technologies {
-        width: 60%;
+        width: 80%;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        column-gap: 0.8rem;
-        row-gap: 0.8rem;
+        column-gap: 1.2rem;
+        row-gap: 1.2rem;
     }
 
     .technologies h3 {
         place-self: center stretch;
-        color: var(--primary-500);
-        font-weight: 600;
-        font-size: 1rem;
+        color: var(--primary-300);
+        font-weight: 200;
+        font-size: 1.3rem;
         text-transform: uppercase;
         text-align: center;
         border: 2px solid var(--secondary-500);
-        box-shadow: 1px 1px 2px var(--secondary-300);
         border-radius: 30px;
         padding: 0.25rem 1rem;
         transition: var(--transition);
@@ -166,15 +196,30 @@ const Wrapper = styled.div`
     }
 
     .description-container {
-        width: 70%;
-        margin: 3rem 0 1rem 0;
+        position: relative;
+        width: 60%;
+        height: 58vh;
+        margin: -1rem 0 2rem 0;
         display: flex;
-        align-items: center;
+        justify-content: center;
         flex-direction: column;
+    }
+
+    .description-container p {
+        text-align: right;
     }
 
     span {
         font-weight: 600;
+    }
+
+    .description-icon {
+        position: absolute;
+        top: -10%;
+        left: -15%;
+        transform: rotate(-15deg);
+        font-size: 40rem;
+        opacity: 0.15;
     }
 
     .btn {
@@ -183,34 +228,35 @@ const Wrapper = styled.div`
     }
 
     .functionalities-container {
+        width: 80%;
+        height: 120vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 80%;
     }
 
     .functionalities {
         display: grid;
         place-items: center;
-        column-gap: 4rem;
-        row-gap: 3rem;
+        column-gap: 5rem;
+        row-gap: 5rem;
         grid-template-columns: 1fr 1fr;
     }
 
     .functionality {
-        width: 32vw;
-        height: 15vw;
-        margin-bottom: 2rem;
+        position: relative;
+        width: 30vw;
+        height: 14vw;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         padding: 1rem;
         border-radius: 30px;
-
         transition: all 0.3s ease-in-out;
         border: 6px double var(--secondary-500);
+        overflow: hidden;
     }
 
     .functionality:hover {
@@ -220,9 +266,11 @@ const Wrapper = styled.div`
     }
 
     .functionality p {
-        font-size: 1rem;
+        font-size: 1.05rem;
+        font-weight: 400;
         line-height: 1.6rem;
         margin-bottom: 0;
+        color: var(--primary-200);
     }
 
     .functionality:hover p {
@@ -230,9 +278,21 @@ const Wrapper = styled.div`
     }
 
     .functionality .icon {
+        position: absolute;
+        top: -5%;
+        left: -5%;
         width: 10%;
-        font-size: 3.8rem;
+        font-size: 8rem;
         line-height: 1.5rem;
+        opacity: 0.2;
+    }
+
+    .slider-container {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .slider {
@@ -242,7 +302,7 @@ const Wrapper = styled.div`
     }
 
     .slider img {
-        width: 50%;
+        width: 60%;
         margin-bottom: 2rem;
         box-shadow: 1px 1px 30px var(--black);
     }
@@ -256,10 +316,15 @@ const Wrapper = styled.div`
         cursor: pointer;
     }
 
-    hr {
-        width: 70%;
-        border-color: var(--secondary-500);
-        opacity: 0.5;
+    .other-container {
+        height: 20vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .other-container h2 {
+        padding-right: 1.5rem;
+        border-right: 2px solid var(--primary-300);
     }
 `;
 
