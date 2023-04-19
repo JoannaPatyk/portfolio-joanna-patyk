@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Button from './Button';
+import PulsatingAnimation from './PulsatingAnimation';
 
 function Link() {
     const link = 'https://household-expenses-tracker-frontend.onrender.com';
@@ -9,9 +11,11 @@ function Link() {
                 <h5>Link to the application.</h5>
                 <div>
                     <p>Just click and see how application looks like...</p>
-                    <a className="btn" href={link}>
-                        Household Expenses Tracker
-                    </a>
+                    <PulsatingAnimation>
+                        <Button>
+                            <a href={link}>Household Expenses Tracker</a>
+                        </Button>
+                    </PulsatingAnimation>
                 </div>
             </div>
         </Wrapper>
@@ -30,6 +34,20 @@ const Wrapper = styled.div`
     .link-container h5,
     a {
         margin: 0;
+    }
+
+    a {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: var(--primary-300);
+    }
+
+    Button {
+        background-color: transparent;
+    }
+
+    Button:hover a {
+        color: var(--black);
     }
 `;
 

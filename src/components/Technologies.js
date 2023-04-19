@@ -1,23 +1,20 @@
 import React from 'react';
 import technologies from '../utils/technologies';
-import { FaReact, FaCss3Alt, FaHtml5, FaNodeJs } from 'react-icons/fa';
-import { IoLogoJavascript } from 'react-icons/io';
-import { SiAxios, SiMongodb, SiExpress } from 'react-icons/si';
+import technologyIcons from '../utils/technologyIcons';
 
 function Technologies() {
     return (
         <div className="technologies-container">
             <div className="technologies-title-container">
                 <h5>Technologies and libraries used in the project.</h5>
-                <div className="technologies-icon">
-                    <FaCss3Alt />
-                    <FaHtml5 />
-                    <FaReact />
-                    <IoLogoJavascript />
-                    <SiAxios />
-                    <SiMongodb />
-                    <FaNodeJs />
-                    <SiExpress />
+                <div className="technologies-icon-container">
+                    <div className="technologies-icon">
+                        {technologyIcons.map(({ id, icon }) => (
+                            <div key={id} className="technology-icon">
+                                {icon}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
             <div className="technologies">

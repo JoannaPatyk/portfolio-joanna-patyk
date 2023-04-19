@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import woman from '../assets/girl.png';
 import bg from '../assets/lights.png';
-import PulsatingText from '../components/PulsatingText';
+import PulsatingAnimation from '../components/PulsatingAnimation';
 
 function Home() {
     return (
@@ -14,12 +14,12 @@ function Home() {
                     <div className="description-text">
                         <h1>Joanna Patyk</h1>
                         <h4>Junior Frontend Developer</h4>
-                        <PulsatingText text="Hi, my name is Joanna..." />
+                        <h2>Hi, my name is Joanna...</h2>
                         <div>
                             <p>
-                                I am learning to be a front-end developer. I discovered my passion for front-end
-                                development in February 2022, and I have been dedicated to expanding my knowledge and
-                                skill set.
+                                I'm currently learning how to become a front-end developer. I discovered my passion for
+                                front-end development in February 2022, and I have been dedicating to expanding my
+                                knowledge and skill set.
                             </p>
                             <p>
                                 My favorite library to work with is <span>React</span>. I am liked about the potential
@@ -27,9 +27,11 @@ function Home() {
                                 new challenges and opportunities to develop.
                             </p>
                         </div>
-                        <Link className="btn" to="/contact">
-                            contact
-                        </Link>
+                        <PulsatingAnimation>
+                            <Link className="btn" to="/contact">
+                                contact
+                            </Link>
+                        </PulsatingAnimation>
                     </div>
                     <img src={woman} alt="" className="woman-img" />
                 </div>
@@ -87,7 +89,7 @@ const Wrapper = styled.div`
         line-height: 2.3rem;
         text-align: justify;
         letter-spacing: var(--smallLetterSpacing);
-        margin: 1.5rem 0;
+        margin: 1.2rem 0;
     }
 
     .description-text h2 {

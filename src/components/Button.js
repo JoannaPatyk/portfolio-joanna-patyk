@@ -10,9 +10,8 @@ function Button({ id, children, onClick, type = 'button' }) {
 }
 
 Button.propTypes = {
-    type: PropTypes.oneOf(['button', 'submit', 'reset']),
+    type: PropTypes.string,
     id: PropTypes.string,
-    isDisabled: PropTypes.bool,
     onClick: PropTypes.func,
     children: PropTypes.node.isRequired
 };

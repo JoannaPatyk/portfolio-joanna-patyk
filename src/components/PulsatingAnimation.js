@@ -2,12 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 
-const PulsatingText = ({ text }) => {
-    return (
-        <Wrapper>
-            <h2>{text}</h2>
-        </Wrapper>
-    );
+const PulsatingAnimation = ({ children }) => {
+    return <Wrapper>{children}</Wrapper>;
 };
 
 const pulsate = keyframes`
@@ -26,8 +22,8 @@ const Wrapper = styled.p`
     animation: ${pulsate} 2s ease-in-out infinite;
 `;
 
-PulsatingText.propTypes = {
-    text: PropTypes.string
+PulsatingAnimation.propTypes = {
+    children: PropTypes.string
 };
 
-export default PulsatingText;
+export default PulsatingAnimation;

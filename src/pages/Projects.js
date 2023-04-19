@@ -163,9 +163,18 @@ const Wrapper = styled.div`
 
     .technologies-icon {
         display: flex;
-        font-size: 2.5rem;
         column-gap: 1.2rem;
         justify-content: center;
+    }
+
+    .technology-icon {
+        font-size: 2.5rem;
+        transition: var(--transition);
+    }
+
+    .technology-icon:hover {
+        transform: scale(1.2);
+        color: var(--secondary-500);
     }
 
     .technologies {
