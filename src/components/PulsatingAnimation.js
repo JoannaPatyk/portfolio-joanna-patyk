@@ -23,7 +23,7 @@ const Wrapper = styled.p`
 `;
 
 PulsatingAnimation.propTypes = {
-    children: PropTypes.string
+    children: PropTypes.object
 };
 
 export default PulsatingAnimation;

@@ -1,18 +1,49 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import links from '../utils/links';
+import { MdKeyboardDoubleArrowUp } from 'react-icons/md';
+import Button from './Button';
 
 function Menu() {
+    const [showButton, setShowButton] = useState(false);
     const navigate = useNavigate();
+    const menuRef = useRef(null);
 
-    function handleClick(path) {
+    const handleChangePage = (path) => {
         navigate(path);
-    }
+    };
+
+    const handleButtonUp = () => {
+        window.scrollTo({
+            top: menuRef.current.offsetTop,
+            behavior: 'smooth'
+        });
+    };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const position = window.pageYOffset;
+            const windowHeight = window.innerHeight;
+            const halfWindowHeight = windowHeight / 2;
+
+            if (position > halfWindowHeight) {
+                setShowButton(true);
+            } else {
+                setShowButton(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <Wrapper>
-            <nav className="menu">
+            <nav className="menu" ref={menuRef}>
                 {links.map(({ id, text, path }) => {
                     return (
                         <div
@@ -20,10 +51,10 @@ function Menu() {
                             role="button"
                             tabIndex={0}
                             key={id}
-                            onClick={() => handleClick(path)}
+                            onClick={() => handleChangePage(path)}
                             onKeyDown={(event) => {
                                 if (event.key === 'Enter' || event.key === ' ') {
-                                    handleClick(path);
+                                    handleChangePage(path);
                                 }
                             }}
                             onKeyUp={(event) => {
@@ -37,6 +68,11 @@ function Menu() {
                     );
                 })}
             </nav>
+            {showButton && (
+                <Button className="btn" id="btn-up" onClick={handleButtonUp}>
+                    <MdKeyboardDoubleArrowUp />
+                </Button>
+            )}
         </Wrapper>
     );
 }
@@ -66,6 +102,21 @@ const Wrapper = styled.nav`
         color: var(--secondary-500);
         transform: scale(0.95);
         border-bottom-color: var(--secondary-500);
+    }
+
+    #btn-up {
+        position: fixed;
+        top: 85%;
+        right: 5%;
+        z-index: 100;
+        width: 45px;
+        height: 45px;
+        background-color: transparent;
+    }
+
+    #btn-up:hover {
+        color: var(--black);
+        background-color: var(--secondary-500);
     }
 `;
 
