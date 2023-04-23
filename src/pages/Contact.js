@@ -94,6 +94,47 @@ const Wrapper = styled.div`
         opacity: 0.3;
         z-index: -100;
     }
+
+    @media (max-width: 795px) {
+        h2 {
+            font-size: 3rem;
+        }
+    }
+
+    @media (max-width: 795px) {
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        .contact-item p {
+            font-size: 1.2rem;
+
+            padding: 1.5rem;
+        }
+
+        span {
+            width: 50px;
+            height: 50px;
+            font-size: 1.7rem;
+        }
+    }
+
+    @media (max-width: 430px) {
+        h2 {
+            font-size: 2rem;
+        }
+
+        .contact-item p {
+            font-size: 1rem;
+            padding: 1.3rem;
+        }
+
+        span {
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+        }
+    }
 `;
 
 export default Contact;

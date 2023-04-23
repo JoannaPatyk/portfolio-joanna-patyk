@@ -28,7 +28,7 @@ function Functionalities() {
 const Wrapper = styled.div`
     .functionalities-container {
         width: 100%;
-        height: 120vh;
+        min-height: 105vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -39,15 +39,15 @@ const Wrapper = styled.div`
     .functionalities {
         display: grid;
         place-items: center;
-        column-gap: 5rem;
-        row-gap: 5rem;
+        column-gap: 3rem;
+        row-gap: 4rem;
         grid-template-columns: 1fr 1fr;
     }
 
     .functionality {
         position: relative;
-        width: 30vw;
-        height: 14vw;
+        width: 36vw;
+        height: 25vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -66,7 +66,7 @@ const Wrapper = styled.div`
     }
 
     .functionality p {
-        font-size: 1.05rem;
+        font-size: 1rem;
         font-weight: 400;
         line-height: 1.6rem;
         margin-bottom: 0;
@@ -85,6 +85,63 @@ const Wrapper = styled.div`
         font-size: 8rem;
         line-height: 1.5rem;
         opacity: 0.2;
+    }
+
+    @media (max-width: 1400px) {
+        .functionalities {
+            row-gap: 3rem;
+            grid-template-columns: 1fr;
+        }
+
+        .functionality {
+            width: 75vh;
+            height: 18vw;
+        }
+    }
+
+    @media (max-width: 1050px) {
+        .functionality {
+            height: 22vh;
+        }
+
+        .functionality p {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 880px) {
+        .functionality {
+            width: 65vw;
+            height: 25vh;
+        }
+    }
+
+    @media (max-width: 720px) {
+        .functionality {
+            height: 30vh;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .functionality {
+            height: 34vh;
+        }
+
+        .functionality p {
+            font-size: 0.8rem;
+        }
+    }
+
+    @media (max-width: 495px) {
+        .functionality {
+            height: 40vh;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .functionality {
+            height: 46vh;
+        }
     }
 `;
 

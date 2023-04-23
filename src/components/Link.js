@@ -8,8 +8,8 @@ function Link() {
     return (
         <Wrapper>
             <div className="link-container">
-                <h5>Link to the application.</h5>
-                <p>Just click and see how application looks like...</p>
+                <h5>Link to the application</h5>
+                <p>Just click and see how application looks like:</p>
                 <PulsatingAnimation>
                     <Button id="button">
                         <a href={link}>Household Expenses Tracker</a>
@@ -41,8 +41,26 @@ const Wrapper = styled.div`
     }
 
     #button {
-        margin: 0;
+        margin: 0 auto;
         background-color: transparent;
+    }
+
+    @media (max-width: 685px) {
+        .link-container h5 {
+            margin-bottom: 0;
+        }
+
+        .link-container p {
+            margin-bottom: 0;
+        }
+
+        a {
+            font-size: 1rem;
+        }
+
+        #button {
+            width: 80%;
+        }
     }
 `;
 

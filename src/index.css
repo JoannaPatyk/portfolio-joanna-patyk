@@ -50,7 +50,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 25rem;
+    width: 60%;
     margin: 1.6rem auto;
     padding: 0.2rem 0.5rem;
     color: var(--black);
@@ -96,6 +96,12 @@ body {
     transform: scale(0.98);
     color: var(--black);
     background-color: var(--secondary-500);
+}
+
+@media (max-width: 1000px) {
+    .btn {
+        width: 80%;
+    }
 }
 
 @keyframes fadeAnimation {

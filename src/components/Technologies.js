@@ -6,7 +6,7 @@ function Technologies() {
     return (
         <div className="technologies-container">
             <div className="technologies-title-container">
-                <h5>Technologies and libraries used in the project.</h5>
+                <h5>Technologies and libraries used in the project</h5>
                 <div className="technologies-icon-container">
                     <div className="technologies-icon">
                         {technologyIcons.map(({ id, icon }) => (

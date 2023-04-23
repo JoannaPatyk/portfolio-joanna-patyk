@@ -145,8 +145,8 @@ const Wrapper = styled.div`
     }
 
     .technologies-container {
-        width: 70%;
-        height: 35vh;
+        width: 75%;
+        min-height: 35vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -206,12 +206,12 @@ const Wrapper = styled.div`
 
     .description-container {
         position: relative;
-        width: 60%;
-        height: 58vh;
-        margin: -1rem 0 2rem 0;
+        width: 70%;
+        min-height: 58vh;
         display: flex;
         justify-content: center;
         flex-direction: column;
+        margin-left: 4rem;
     }
 
     .description-container p {
@@ -226,6 +226,7 @@ const Wrapper = styled.div`
         position: absolute;
         top: -10%;
         left: -15%;
+        z-index: -100;
         transform: rotate(-15deg);
         font-size: 40rem;
         opacity: 0.15;
@@ -237,7 +238,7 @@ const Wrapper = styled.div`
     }
 
     .slider-container {
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -251,7 +252,7 @@ const Wrapper = styled.div`
     }
 
     .slider img {
-        width: 60%;
+        width: 80%;
         margin-bottom: 2rem;
         box-shadow: 1px 1px 30px var(--black);
     }
@@ -266,14 +267,114 @@ const Wrapper = styled.div`
     }
 
     .other-container {
-        height: 20vh;
+        min-height: 20vh;
         display: flex;
         align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .other-container p {
+        width: 100%;
+        padding: 0 2rem;
     }
 
     .other-container h2 {
+        margin: 2rem 0 0 0;
         padding-right: 1.5rem;
-        border-right: 2px solid var(--primary-300);
+    }
+
+    @media (max-width: 1400px) {
+        .technologies-container {
+            flex-direction: column;
+        }
+
+        .technologies-container h5 {
+            text-align: center;
+            padding: 0;
+        }
+
+        .technologies-title-container {
+            margin-bottom: 2rem;
+            border-right: none;
+            border-bottom: 2px solid var(--primary-300);
+        }
+
+        .description-container {
+            min-height: 70vh;
+        }
+
+        .slider-container {
+            min-height: 80vh;
+        }
+    }
+
+    @media (max-width: 1050px) {
+        .main-information-container h1 {
+            font-size: 3.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        h5 {
+            font-size: 1.5rem;
+        }
+
+        .technologies {
+            width: 100%;
+            column-gap: 0.8rem;
+            row-gap: 0.8rem;
+        }
+
+        .technologies h3 {
+            font-size: 1.1rem;
+            padding: 0.2rem 0.9rem;
+        }
+
+        .slider-container {
+            display: none;
+        }
+    }
+
+    @media (max-width: 905px) {
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .description-container {
+            min-height: 80vh;
+            margin-left: 0;
+        }
+    }
+
+    @media (max-width: 685px) {
+        .description-container {
+            min-height: 80vh;
+            width: 75%;
+        }
+
+        .technologies-icon {
+            column-gap: 0.6rem;
+        }
+
+        .other-container h2 {
+            padding: 0;
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width: 530px) {
+        .description-container {
+            min-height: 90vh;
+        }
+
+        .technology-icon {
+            font-size: 2rem;
+        }
     }
 `;
 
