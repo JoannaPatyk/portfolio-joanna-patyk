@@ -5,23 +5,23 @@ function Footer() {
     return (
         <Wrapper>
             <hr />
-            <div>Copyright © 2023 Joanna Patyk | All Rights Reserved</div>
+            <div className="footer-content">Copyright © 2023 Joanna Patyk | All Rights Reserved</div>
         </Wrapper>
     );
 }
 
 const Wrapper = styled.div`
-    div {
+    .footer-content {
         height: 5vh;
         line-height: 5vh;
         text-align: center;
     }
 
     hr {
-        width: 90vw;
+        width: 80vw;
         margin: 2rem auto 0;
-        border-color: var(--secondary-500);
         opacity: 0.5;
+        border-color: var(--secondary-500);
     }
 `;
 

@@ -36,9 +36,7 @@ function Menu() {
 
         window.addEventListener('scroll', handleScroll);
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     return (
@@ -69,7 +67,7 @@ function Menu() {
                 })}
             </nav>
             {showButton && (
-                <Button className="btn" id="btn-up" onClick={handleButtonUp}>
+                <Button id="btn-up" onClick={handleButtonUp}>
                     <MdKeyboardDoubleArrowUp />
                 </Button>
             )}

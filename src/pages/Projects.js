@@ -236,66 +236,6 @@ const Wrapper = styled.div`
         margin-bottom: 2rem;
     }
 
-    .functionalities-container {
-        width: 80%;
-        height: 120vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .functionalities {
-        display: grid;
-        place-items: center;
-        column-gap: 5rem;
-        row-gap: 5rem;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .functionality {
-        position: relative;
-        width: 30vw;
-        height: 14vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 1rem;
-        border-radius: 30px;
-        transition: all 0.3s ease-in-out;
-        border: 6px double var(--secondary-500);
-        overflow: hidden;
-    }
-
-    .functionality:hover {
-        color: var(--black);
-        box-shadow: 1px 1px 10px var(--secondary-300);
-        background-color: var(--secondary-500);
-    }
-
-    .functionality p {
-        font-size: 1.05rem;
-        font-weight: 400;
-        line-height: 1.6rem;
-        margin-bottom: 0;
-        color: var(--primary-200);
-    }
-
-    .functionality:hover p {
-        color: var(--black);
-    }
-
-    .functionality .icon {
-        position: absolute;
-        top: -5%;
-        left: -5%;
-        width: 10%;
-        font-size: 8rem;
-        line-height: 1.5rem;
-        opacity: 0.2;
-    }
-
     .slider-container {
         height: 100vh;
         display: flex;
