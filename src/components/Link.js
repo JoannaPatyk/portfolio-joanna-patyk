@@ -22,19 +22,19 @@ function Link() {
 
 const Wrapper = styled.div`
     .link-container {
-        height: 25vh;
+        height: 22 vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    h5,
-    a {
-        margin: 0;
+    .link-container h5 {
+        margin: 2rem 0 0 0;
     }
 
     a {
+        margin: 0 auto;
         font-size: 1.2rem;
         font-weight: 500;
         color: var(--primary-300);
@@ -46,10 +46,6 @@ const Wrapper = styled.div`
     }
 
     @media (max-width: 685px) {
-        .link-container h5 {
-            margin-bottom: 0;
-        }
-
         .link-container p {
             margin-bottom: 0;
         }
@@ -59,7 +55,9 @@ const Wrapper = styled.div`
         }
 
         #button {
-            width: 80%;
+            margin: 0;
+            width: 100%;
+            letter-spacing: 2px;
         }
     }
 `;

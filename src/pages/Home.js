@@ -165,7 +165,7 @@ const Wrapper = styled.div`
         }
 
         .woman-img {
-            right: -2%;
+            right: -20%;
             height: 80%;
         }
     }
@@ -215,13 +215,19 @@ const Wrapper = styled.div`
         }
 
         .description-text p {
+            font-size: 0.9rem;
             text-align: left;
         }
     }
 
-    @media (max-width: 565px) {
+    @media (max-width: 500  px) {
+        .description-text h1 {
+            font-size: 2.8rem;
+        }
+
         .description-text h2 {
-            font-size: 1.2rem;
+            font-size: 1rem;
+            text-align: left;
         }
     }
 `;

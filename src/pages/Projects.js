@@ -12,6 +12,7 @@ function Project() {
     const link = 'https://github.com/JoannaPatyk?tab=repositories';
     return (
         <Wrapper>
+            <hr />
             <div className="projects-container">
                 <div className="main-information-container">
                     <h2>Main project</h2>
@@ -85,6 +86,10 @@ const Wrapper = styled.div`
 
     .main-information-container {
         padding: 2rem 0;
+    }
+
+    hr {
+        margin: 0 auto;
     }
 
     h2 {
@@ -275,13 +280,12 @@ const Wrapper = styled.div`
     }
 
     .other-container p {
-        width: 100%;
+        width: 80%;
         padding: 0 2rem;
     }
 
     .other-container h2 {
         margin: 2rem 0 0 0;
-        padding-right: 1.5rem;
     }
 
     @media (max-width: 1400px) {
@@ -301,7 +305,8 @@ const Wrapper = styled.div`
         }
 
         .description-container {
-            min-height: 70vh;
+            min-height: 75vh;
+            overflow: hidden;
         }
 
         .slider-container {
@@ -322,6 +327,10 @@ const Wrapper = styled.div`
             font-size: 1.5rem;
         }
 
+        .description-container {
+            min-height: 85vh;
+        }
+
         .technologies {
             width: 100%;
             column-gap: 0.8rem;
@@ -340,20 +349,20 @@ const Wrapper = styled.div`
 
     @media (max-width: 905px) {
         p {
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
     }
 
     @media (max-width: 800px) {
         .description-container {
-            min-height: 80vh;
+            min-height: 90vh;
             margin-left: 0;
         }
     }
 
-    @media (max-width: 685px) {
+    @media (max-width: 695px) {
         .description-container {
-            min-height: 80vh;
+            min-height: 100vh;
             width: 75%;
         }
 
@@ -361,19 +370,56 @@ const Wrapper = styled.div`
             column-gap: 0.6rem;
         }
 
+        .description-icon {
+            top: 0;
+            font-size: 30rem;
+        }
+
         .other-container h2 {
-            padding: 0;
             font-size: 2rem;
+        }
+    }
+
+    @media (max-width: 695px) {
+        .description-container {
+            min-height: 110vh;
         }
     }
 
     @media (max-width: 530px) {
         .description-container {
-            min-height: 90vh;
+            min-height: 115vh;
         }
 
         .technology-icon {
             font-size: 2rem;
+        }
+    }
+
+    @media (max-width: 485px) {
+        .main-information-container h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        .reason-container p {
+            width: 100%;
+        }
+
+        .technology-icon {
+            font-size: 1.8rem;
+        }
+
+        .description-container p {
+            text-align: center;
+        }
+
+        .description-icon {
+            top: 5%;
+            font-size: 20rem;
         }
     }
 `;

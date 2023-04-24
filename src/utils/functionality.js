@@ -7,7 +7,7 @@ import { GiFamilyTree } from 'react-icons/gi';
 const functionality = [
     {
         id: 1,
-        text: 'The dashboard presents information for the current month. Users can navigate between different months. The dashboard includes a chart that displays incurred expenses in two formats: pie chart and bar chart. Furthermore, the dashboard provides information on the total planned expenses, incurred expenses, and the balance.',
+        text: 'The dashboard presents information for the current month, includes a chart that displays incurred expenses in two formats: pie chart and bar chart. Furthermore, the dashboard provides information on the total planned expenses, incurred expenses, and the balance.',
         icon: <TfiStatsUp />
     },
 
@@ -37,7 +37,7 @@ const functionality = [
 
     {
         id: 6,
-        text: 'The last tab concerns groups. The user can create their own group, give it any name, invite or remove other application users from their group. They can also join another group if they receive an invitation from another user. In this way, the budget can be shared with other people, for example, with family members.',
+        text: 'The last tab concerns groups. The user can create their own group, change name, invite or remove other users from their group. They can also join another group if they receive an invitation from another user. So, the budget can be shared with other people, for example, with family members.',
         icon: <GiFamilyTree />
     }
 ];

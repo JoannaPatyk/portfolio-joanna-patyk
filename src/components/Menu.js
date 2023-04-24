@@ -118,16 +118,12 @@ const Wrapper = styled.nav`
     }
 
     @media (max-width: 795px) {
-        .menu {
-            padding-right: 0;
-        }
-
         .menu-element {
             letter-spacing: 0;
         }
 
         #btn-up {
-            right: 2%;
+            display: none;
         }
     }
 
@@ -144,6 +140,11 @@ const Wrapper = styled.nav`
     }
 
     @media (max-width: 550px) {
+        .menu {
+            justify-content: center;
+            padding-right: 0;
+        }
+
         .menu-element {
             font-size: 1.2rem;
             padding: 1rem;

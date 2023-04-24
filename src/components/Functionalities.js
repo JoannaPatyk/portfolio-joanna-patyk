@@ -128,19 +128,21 @@ const Wrapper = styled.div`
         }
 
         .functionality p {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
         }
     }
 
     @media (max-width: 495px) {
         .functionality {
-            height: 40vh;
+            height: 45vh;
+            width: 75vw;
         }
     }
 
     @media (max-width: 420px) {
         .functionality {
-            height: 46vh;
+            width: 75vw;
+            height: 50vh;
         }
     }
 `;

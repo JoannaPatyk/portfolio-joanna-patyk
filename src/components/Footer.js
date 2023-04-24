@@ -17,11 +17,10 @@ const Wrapper = styled.div`
         text-align: center;
     }
 
-    hr {
-        width: 80vw;
-        margin: 2rem auto 0;
-        opacity: 0.5;
-        border-color: var(--secondary-500);
+    @media (max-width: 420px) {
+        .footer-content {
+            font-size: 0.8rem;
+        }
     }
 `;
 
