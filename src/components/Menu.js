@@ -116,6 +116,44 @@ const Wrapper = styled.nav`
         color: var(--black);
         background-color: var(--secondary-500);
     }
+
+    @media (max-width: 795px) {
+        .menu {
+            padding-right: 0;
+        }
+
+        .menu-element {
+            letter-spacing: 0;
+        }
+
+        #btn-up {
+            right: 2%;
+        }
+    }
+
+    @media (max-width: 610px) {
+        .menu-element {
+            font-size: 1.4rem;
+            padding: 1.5rem;
+        }
+
+        #btn-up {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    @media (max-width: 550px) {
+        .menu-element {
+            font-size: 1.2rem;
+            padding: 1rem;
+        }
+
+        #btn-up {
+            width: 35px;
+            height: 35px;
+        }
+    }
 `;
 
 export default Menu;

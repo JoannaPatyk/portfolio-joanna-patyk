@@ -42,7 +42,7 @@ function Home() {
 
 const Wrapper = styled.div`
     .main-container {
-        height: 90vh;
+        min-height: 90vh;
         position: relative;
         display: flex;
         margin: 0 auto;
@@ -120,6 +120,109 @@ const Wrapper = styled.div`
         bottom: 0;
         right: 5%;
         height: 100%;
+        z-index: -100;
+        opacity: 0.8;
+    }
+
+    @media (max-width: 1550px) {
+        .description-text p {
+            font-size: 1rem;
+        }
+
+        .woman-img {
+            right: 0;
+            height: 90%;
+        }
+    }
+
+    @media (max-width: 1260px) {
+        .description-text h1 {
+            margin-top: 2rem;
+            font-size: 5.5rem;
+        }
+
+        .description-text p {
+            font-size: 1rem;
+        }
+
+        .woman-img {
+            right: -2%;
+            height: 85%;
+        }
+    }
+
+    @media (max-width: 1060px) {
+        .description-text h1 {
+            font-size: 5rem;
+        }
+
+        .description-text h4 {
+            font-size: 1.3rem;
+        }
+
+        .description-text p {
+            line-height: 2rem;
+        }
+
+        .woman-img {
+            right: -2%;
+            height: 80%;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        .main-container {
+            justify-content: center;
+            text-align: center;
+        }
+
+        .description-text {
+            max-width: 85%;
+        }
+
+        .woman-img {
+            opacity: 0.2;
+        }
+    }
+
+    @media (max-width: 655px) {
+        .description-text h1 {
+            font-size: 4.5rem;
+        }
+
+        .description-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .description-text h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .description-text p {
+            line-height: 1.8rem;
+        }
+    }
+
+    @media (max-width: 565px) {
+        .description-text h1 {
+            font-size: 4rem;
+        }
+
+        .description-text h4 {
+            font-size: 1rem;
+        }
+
+        .description-text p {
+            text-align: left;
+        }
+    }
+
+    @media (max-width: 565px) {
+        .description-text h2 {
+            font-size: 1.2rem;
+        }
     }
 `;
 
