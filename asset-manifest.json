@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-joanna-patyk/static/css/main.65a86c0d.css",
-    "main.js": "/portfolio-joanna-patyk/static/js/main.c6a70ac4.js",
+    "main.js": "/portfolio-joanna-patyk/static/js/main.a8b949e0.js",
     "static/media/girl.png": "/portfolio-joanna-patyk/static/media/girl.f2188cba2a5b5df6a356.png",
     "static/media/lights.png": "/portfolio-joanna-patyk/static/media/lights.cf9e8665ac80ec2d0364.png",
     "static/media/screen-1.png": "/portfolio-joanna-patyk/static/media/screen-1.a57a3fd7fb702aa9e6e8.png",
@@ -12,10 +12,10 @@
     "static/media/screen-6.png": "/portfolio-joanna-patyk/static/media/screen-6.13947d3dde115e984a47.png",
     "index.html": "/portfolio-joanna-patyk/index.html",
     "main.65a86c0d.css.map": "/portfolio-joanna-patyk/static/css/main.65a86c0d.css.map",
-    "main.c6a70ac4.js.map": "/portfolio-joanna-patyk/static/js/main.c6a70ac4.js.map"
+    "main.a8b949e0.js.map": "/portfolio-joanna-patyk/static/js/main.a8b949e0.js.map"
   },
   "entrypoints": [
     "static/css/main.65a86c0d.css",
-    "static/js/main.c6a70ac4.js"
+    "static/js/main.a8b949e0.js"
   ]
 }
