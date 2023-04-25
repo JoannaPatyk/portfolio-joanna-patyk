@@ -77,7 +77,7 @@ const Wrapper = styled.div`
         font-weight: 100;
         font-size: 6.5rem;
         font-family: var(--titleFont);
-        background: linear-gradient(to right, var(--primary-500), var(--violet));
+        background: linear-gradient(to right, var(--primary-500), var(--secondary-500));
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

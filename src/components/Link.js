@@ -9,7 +9,7 @@ function Link() {
         <Wrapper>
             <div className="link-container">
                 <h5>Link to the application</h5>
-                <p>Just click and see how application looks like:</p>
+                <p>Just click and see how application looks like.</p>
                 <PulsatingAnimation>
                     <Button id="button">
                         <a href={link}>Household Expenses Tracker</a>
@@ -22,11 +22,12 @@ function Link() {
 
 const Wrapper = styled.div`
     .link-container {
-        height: 22 vh;
+        height: 30vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        position: relative;
     }
 
     .link-container h5 {

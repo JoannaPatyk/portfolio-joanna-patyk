@@ -21,7 +21,7 @@
     --secondary-200: #ace0e2;
     --secondary-300: #82d1d4;
     --secondary-400: #59c1c5;
-    --secondary-500: #2fb2b7;
+    --secondary-500: #2cabaf;
 
     --black: black;
     --white: #fff;
@@ -32,11 +32,11 @@
     --titleFont: 'Zen Tokyo Zoo', cursive;
     --basicFont: 'Poppins', sans-serif;
 
-    --borderRadius: 0.25rem;
+    --borderRadius: 2rem;
     --smallLetterSpacing: 0.1rem;
     --letterSpacing: 0.4rem;
     --transition: 0.6s all;
-}
+} 
 
 body {
     margin: 0 auto;
@@ -98,15 +98,13 @@ body {
     background-color: var(--secondary-500);
 }
 
-
 hr {
     width: 80vw;
     margin: 2rem auto 0;
     opacity: 0.5;
-    height:4px;
-    border: none;;
-    background: linear-gradient(to right, #ff00cc, #2fb2b7);
-    /* border-color: var(--secondary-500); */
+    height: 4px;
+    border: none;
+    background: linear-gradient(to right, var(--primary-500), var(--secondary-500));
 }
 
 @media (max-width: 1000px) {

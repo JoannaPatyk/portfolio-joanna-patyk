@@ -7,6 +7,7 @@ import Functionalities from '../components/Functionalities';
 import Footer from '../components/Footer';
 import Link from '../components/Link';
 import { GiTakeMyMoney } from 'react-icons/gi';
+import logo from '../assets/logo-dark.png';
 
 function Project() {
     const link = 'https://github.com/JoannaPatyk?tab=repositories';
@@ -15,8 +16,8 @@ function Project() {
             <hr />
             <div className="projects-container">
                 <div className="main-information-container">
-                    <h2>Main project</h2>
-                    <h1>Household Expenses Tracker</h1>
+                    <h1>main project</h1>
+                    <img className="logo" src={logo} alt="logo" />
                     <div className="reason-container">
                         <h5>Why household expenses tracker application?</h5>
                         <p>
@@ -56,11 +57,13 @@ function Project() {
                 <Slider array={images} />
                 <Link />
                 <div className="other-container">
-                    <h2>Other projects</h2>
+                    <h1>Other projects</h1>
                     <p>
                         Other projects that have been done by me can be found on my{' '}
                         <span>
-                            <a href={link}>github profile</a>
+                            <a className="github" href={link}>
+                                github profile
+                            </a>
                         </span>
                         .
                     </p>
@@ -92,17 +95,6 @@ const Wrapper = styled.div`
         margin: 0 auto;
     }
 
-    h2 {
-        font-weight: 800;
-        font-size: 3rem;
-        background: linear-gradient(to right, #ff00cc, #2fb2b7);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        letter-spacing: var(--smallLetterSpacing);
-        text-transform: uppercase;
-    }
-
     h5,
     p {
         margin: 1rem;
@@ -120,7 +112,7 @@ const Wrapper = styled.div`
         text-align: center;
         font-size: 1.8rem;
         line-height: 2.2rem;
-        background: linear-gradient(to right, #ff00cc, #2fb2b7);
+        background: linear-gradient(to right, var(--primary-500), var(--secondary-500));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -130,14 +122,17 @@ const Wrapper = styled.div`
         margin: 0;
     }
 
-    .main-information-container h1 {
-        font-weight: 100;
-        font-size: 4.5rem;
-        color: var(--secondary-500);
-        text-shadow: 1px 1px 5px var(--secondary-300);
+    h1 {
+        padding: 2rem 0 0 0;
+        font-size: 3.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
         font-family: var(--titleFont);
-        text-align: center;
-        margin: 1rem 0;
+        background: linear-gradient(to right, var(--primary-500), var(--secondary-500));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        letter-spacing: var(--smallLetterSpacing);
     }
 
     .reason-container {
@@ -147,66 +142,6 @@ const Wrapper = styled.div`
         justify-content: center;
         align-items: center;
         flex-direction: column;
-    }
-
-    .technologies-container {
-        width: 75%;
-        min-height: 35vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .technologies-title-container {
-        border-right: 2px solid var(--primary-300);
-    }
-
-    .technologies-container h5 {
-        text-align: right;
-        padding-right: 1.5rem;
-    }
-
-    .technologies-icon {
-        display: flex;
-        column-gap: 1.2rem;
-        justify-content: center;
-    }
-
-    .technology-icon {
-        font-size: 2.5rem;
-        transition: var(--transition);
-    }
-
-    .technology-icon:hover {
-        transform: scale(1.2);
-        color: var(--secondary-500);
-    }
-
-    .technologies {
-        width: 80%;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        column-gap: 1.2rem;
-        row-gap: 1.2rem;
-    }
-
-    .technologies h3 {
-        place-self: center stretch;
-        color: var(--primary-300);
-        font-weight: 200;
-        font-size: 1.3rem;
-        text-transform: uppercase;
-        text-align: center;
-        border: 2px solid var(--secondary-500);
-        border-radius: 30px;
-        padding: 0.25rem 1rem;
-        transition: var(--transition);
-    }
-
-    .technologies h3:hover {
-        color: var(--black);
-        background-color: var(--secondary-500);
     }
 
     .description-container {
@@ -257,7 +192,7 @@ const Wrapper = styled.div`
     }
 
     .slider img {
-        width: 80%;
+        width: 75%;
         margin-bottom: 2rem;
         box-shadow: 1px 1px 30px var(--black);
     }
@@ -280,30 +215,20 @@ const Wrapper = styled.div`
     }
 
     .other-container p {
-        width: 80%;
+        width: 100%;
         padding: 0 2rem;
     }
 
-    .other-container h2 {
-        margin: 2rem 0 0 0;
+    .other-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .github {
+        text-decoration: none;
+        color: var(--primary-500);
     }
 
     @media (max-width: 1400px) {
-        .technologies-container {
-            flex-direction: column;
-        }
-
-        .technologies-container h5 {
-            text-align: center;
-            padding: 0;
-        }
-
-        .technologies-title-container {
-            margin-bottom: 2rem;
-            border-right: none;
-            border-bottom: 2px solid var(--primary-300);
-        }
-
         .description-container {
             min-height: 75vh;
             overflow: hidden;
@@ -315,12 +240,8 @@ const Wrapper = styled.div`
     }
 
     @media (max-width: 1050px) {
-        .main-information-container h1 {
+        h1 {
             font-size: 3.5rem;
-        }
-
-        h2 {
-            font-size: 2.5rem;
         }
 
         h5 {
@@ -329,17 +250,6 @@ const Wrapper = styled.div`
 
         .description-container {
             min-height: 85vh;
-        }
-
-        .technologies {
-            width: 100%;
-            column-gap: 0.8rem;
-            row-gap: 0.8rem;
-        }
-
-        .technologies h3 {
-            font-size: 1.1rem;
-            padding: 0.2rem 0.9rem;
         }
 
         .slider-container {
@@ -361,13 +271,13 @@ const Wrapper = styled.div`
     }
 
     @media (max-width: 695px) {
-        .description-container {
-            min-height: 100vh;
-            width: 75%;
+        .logo {
+            width: 80%;
         }
 
-        .technologies-icon {
-            column-gap: 0.6rem;
+        .description-container {
+            min-height: 130vh;
+            width: 75%;
         }
 
         .description-icon {
@@ -375,42 +285,34 @@ const Wrapper = styled.div`
             font-size: 30rem;
         }
 
-        .other-container h2 {
+        .other-container h1 {
             font-size: 2rem;
         }
     }
 
     @media (max-width: 695px) {
+        h1 {
+            font-size: 2.8rem;
+        }
+
         .description-container {
             min-height: 110vh;
         }
     }
 
     @media (max-width: 530px) {
-        .description-container {
-            min-height: 115vh;
-        }
-
-        .technology-icon {
-            font-size: 2rem;
+        h1 {
+            font-size: 2.5rem;
         }
     }
 
     @media (max-width: 485px) {
-        .main-information-container h1 {
-            font-size: 2rem;
-        }
-
-        h2 {
+        h1 {
             font-size: 2rem;
         }
 
         .reason-container p {
             width: 100%;
-        }
-
-        .technology-icon {
-            font-size: 1.8rem;
         }
 
         .description-container p {

@@ -53,7 +53,7 @@ const Wrapper = styled.div`
         justify-content: center;
         text-align: center;
         padding: 1rem;
-        border-radius: 30px;
+        border-radius: var(--borderRadius);
         transition: all 0.6s ease-in-out;
         border: 6px double var(--secondary-500);
         overflow: hidden;
