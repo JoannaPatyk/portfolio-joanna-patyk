@@ -192,7 +192,7 @@ const Wrapper = styled.div`
     }
 
     .slider img {
-        width: 75%;
+        width: 70%;
         margin-bottom: 2rem;
         box-shadow: 1px 1px 30px var(--black);
     }

@@ -56,7 +56,7 @@ const Wrapper = styled.div`
         left: -15%;
         z-index: -100;
         transform: rotate(-10deg);
-        opacity: 0.4;
+        opacity: 0.6;
     }
 
     .description-container {
@@ -69,11 +69,11 @@ const Wrapper = styled.div`
     }
 
     .description-text {
-        max-width: 58%;
+        max-width: 50%;
     }
 
     .description-text h1 {
-        margin-top: -4rem;
+        margin-top: -2rem;
         font-weight: 100;
         font-size: 6.5rem;
         font-family: var(--titleFont);
@@ -97,7 +97,7 @@ const Wrapper = styled.div`
     }
 
     .description-text p {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     span {
@@ -121,7 +121,7 @@ const Wrapper = styled.div`
         right: 5%;
         height: 100%;
         z-index: -100;
-        opacity: 0.8;
+        opacity: 0.9;
     }
 
     @media (max-width: 1550px) {
@@ -220,7 +220,7 @@ const Wrapper = styled.div`
         }
     }
 
-    @media (max-width: 500  px) {
+    @media (max-width: 500px) {
         .description-text h1 {
             font-size: 2.8rem;
         }

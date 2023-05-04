@@ -82,6 +82,7 @@ const Wrapper = styled.nav`
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        background-color: transparent;
         padding-right: 3rem;
     }
 

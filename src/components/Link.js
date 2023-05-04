@@ -9,7 +9,7 @@ function Link() {
         <Wrapper>
             <div className="link-container">
                 <h5>Link to the application</h5>
-                <p>Just click and see how application looks like.</p>
+                <p>Just click to test how the application works and see what it looks like...</p>
                 <PulsatingAnimation>
                     <Button id="button">
                         <a href={link}>Household Expenses Tracker</a>
