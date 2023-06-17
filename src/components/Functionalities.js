@@ -62,13 +62,13 @@ const Wrapper = styled.div`
     .functionality:hover {
         color: var(--black);
         box-shadow: 1px 1px 10px var(--secondary-300);
-        background-color: var(--secondary-500);
+        background-color: var(--secondary-200);
     }
 
     .functionality p {
-        font-size: 1rem;
+        font-size: 1.05rem;
         font-weight: 400;
-        line-height: 1.6rem;
+        line-height: 1.65rem;
         margin-bottom: 0;
         color: var(--primary-200);
     }
@@ -79,10 +79,10 @@ const Wrapper = styled.div`
 
     .functionality .icon {
         position: absolute;
-        top: -5%;
+        top: -15%;
         left: -5%;
         width: 10%;
-        font-size: 8rem;
+        font-size: 12rem;
         line-height: 1.5rem;
         opacity: 0.2;
     }

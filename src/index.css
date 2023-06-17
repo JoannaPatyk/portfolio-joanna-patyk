@@ -11,11 +11,11 @@
 }
 
 :root {
-    --primary-100: #ffe6fa;
-    --primary-200: #ffb3f0;
-    --primary-300: #ff80e6;
-    --primary-400: #ff4ddb;
-    --primary-500: #ff00cc;
+    --primary-100: #fbe6f9;
+    --primary-200: #f4b4ec;
+    --primary-300: #ed82e0;
+    --primary-400: #e650d4;
+    --primary-500: #db05c1;
 
     --secondary-100: #eaf7f8;
     --secondary-200: #ace0e2;
@@ -60,7 +60,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--primary-300);
+    color: var(--primary-500);
     letter-spacing: var(--letterSpacing);
     border: 4px double var(--secondary-500);
     border-radius: 30px;

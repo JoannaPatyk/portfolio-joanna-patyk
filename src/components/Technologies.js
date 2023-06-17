@@ -8,7 +8,7 @@ function Technologies() {
         <Wrapper>
             <div className="technologies-container">
                 <div className="technologies-title-container">
-                    <h5>Technologies and libraries used in the project</h5>
+                    <h5>Technologies and libraries used in this the project</h5>
                     <div className="technologies-icon-container">
                         <div className="technologies-icon">
                             {technologyIcons.map(({ id, icon }) => (
@@ -75,9 +75,10 @@ const Wrapper = styled.div`
 
     .technologies h3 {
         place-self: center stretch;
-        color: var(--primary-300);
+        color: var(--primary-500);
         font-weight: 200;
         font-size: 1.3rem;
+        letter-spacing: 4px;
         text-transform: uppercase;
         text-align: center;
         border: 2px solid var(--secondary-500);

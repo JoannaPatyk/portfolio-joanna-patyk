@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import woman from '../assets/girl.png';
+import woman from '../assets/girl2.png';
 import bg from '../assets/lights.png';
 import PulsatingAnimation from '../components/PulsatingAnimation';
 
@@ -14,8 +14,8 @@ function Home() {
                     <div className="description-text">
                         <h1>Joanna Patyk</h1>
                         <h4>Junior Frontend Developer</h4>
-                        <h2>Hi, my name is Joanna...</h2>
-                        <div>
+                        <h2>Hi, my name is Joanna!</h2>
+                        <>
                             <p>
                                 I'm currently learning how to become a front-end developer. I discovered my passion for
                                 front-end development in February 2022, and I have been dedicating to expanding my
@@ -26,7 +26,7 @@ function Home() {
                                 it offers for building interactive and dynamic user interfaces. I am always looking for
                                 new challenges and opportunities to develop.
                             </p>
-                        </div>
+                        </>
                         <PulsatingAnimation>
                             <Link className="btn" to="/contact">
                                 contact
@@ -56,7 +56,7 @@ const Wrapper = styled.div`
         left: -15%;
         z-index: -100;
         transform: rotate(-10deg);
-        opacity: 0.6;
+        opacity: 0.5;
     }
 
     .description-container {
@@ -94,10 +94,12 @@ const Wrapper = styled.div`
 
     .description-text h2 {
         font-weight: 600;
+        color: var(--secondary-500);
     }
 
     .description-text p {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        color: var(--primary-500);
     }
 
     span {
@@ -121,7 +123,6 @@ const Wrapper = styled.div`
         right: 5%;
         height: 100%;
         z-index: -100;
-        opacity: 0.9;
     }
 
     @media (max-width: 1550px) {

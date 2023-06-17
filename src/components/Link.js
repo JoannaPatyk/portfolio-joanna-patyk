@@ -38,7 +38,7 @@ const Wrapper = styled.div`
         margin: 0 auto;
         font-size: 1.2rem;
         font-weight: 500;
-        color: var(--primary-300);
+        color: var(--primary-500);
     }
 
     #button {
