@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/portfolio-joanna-patyk/static/css/main.209ae718.css",
-    "main.js": "/portfolio-joanna-patyk/static/js/main.5b317272.js",
-    "static/media/girl.png": "/portfolio-joanna-patyk/static/media/girl.f2188cba2a5b5df6a356.png",
+    "main.css": "/portfolio-joanna-patyk/static/css/main.c25ec313.css",
+    "main.js": "/portfolio-joanna-patyk/static/js/main.364de749.js",
     "static/media/lights.png": "/portfolio-joanna-patyk/static/media/lights.cf9e8665ac80ec2d0364.png",
+    "static/media/girl2.png": "/portfolio-joanna-patyk/static/media/girl2.481f3c2ef8fbd38616a7.png",
     "static/media/screen-1.png": "/portfolio-joanna-patyk/static/media/screen-1.a57a3fd7fb702aa9e6e8.png",
     "static/media/screen-2.png": "/portfolio-joanna-patyk/static/media/screen-2.b16a038f0af9bdb1d36e.png",
     "static/media/screen-5.png": "/portfolio-joanna-patyk/static/media/screen-5.8971b3f10407297c3b92.png",
@@ -12,11 +12,11 @@
     "static/media/screen-6.png": "/portfolio-joanna-patyk/static/media/screen-6.13947d3dde115e984a47.png",
     "static/media/logo-dark.png": "/portfolio-joanna-patyk/static/media/logo-dark.2afb10d92229775171dc.png",
     "index.html": "/portfolio-joanna-patyk/index.html",
-    "main.209ae718.css.map": "/portfolio-joanna-patyk/static/css/main.209ae718.css.map",
-    "main.5b317272.js.map": "/portfolio-joanna-patyk/static/js/main.5b317272.js.map"
+    "main.c25ec313.css.map": "/portfolio-joanna-patyk/static/css/main.c25ec313.css.map",
+    "main.364de749.js.map": "/portfolio-joanna-patyk/static/js/main.364de749.js.map"
   },
   "entrypoints": [
-    "static/css/main.209ae718.css",
-    "static/js/main.5b317272.js"
+    "static/css/main.c25ec313.css",
+    "static/js/main.364de749.js"
   ]
 }
